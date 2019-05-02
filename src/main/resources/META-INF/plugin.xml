@@ -1,0 +1,41 @@
+<idea-plugin>
+    <id>com.joseph.stackoverflow</id>
+    <name>stackoverflow</name>
+    <vendor email="support@joseph.com" url="http://www.joseph.com">joseph</vendor>
+
+    <description>
+        Search selected text in editor and console in stackoverflow
+    </description>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+    <actions>
+        <!-- Add your actions here -->
+        <action class="StackOverFlowEditor"
+                description="Search selected text on Stackoverflow"
+                icon="icon.png"
+                id="toolsaction"  text="Search on Stackoverflow">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <keyboard-shortcut first-keystroke="control shift S" keymap="$default"/>
+        </action>
+        <action class="StackOverFlowEditor"
+                description="Search selected text on Stackoverflow"
+                icon="icon.png"
+                id="editoraction"  text="Search on Stackoverflow">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut first-keystroke="control shift S" keymap="$default"/>
+        </action>
+        <action class="StackOverFlowConsole"
+                description="Search selected text on Stackoverflow"
+                icon="icon.png"
+                id="consoleaction"  text="Search on Stackoverflow">
+            <add-to-group group-id="ConsoleEditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut first-keystroke="control shift S" keymap="$default"/>
+
+        </action>
+
+    </actions>
+</idea-plugin>
